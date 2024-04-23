@@ -1,0 +1,13 @@
+Functions - standalone procedures that perform a specific task\
+def add_numbers(a, b):
+    return a + b
+
+Methods - functions that are associated with an object
+class MyClass:
+    def my_method(self):
+        print("This is a method of MyClass.")
+
+Attributes - associated with an object and are used to store data related to the object
+class MyClass:
+    def __init__(self, my_attribute):
+        self.my_attribute = my_attribute
