@@ -1,0 +1,12 @@
+Line
+best used: show the change in one or more variables over time (time-series, x-axis = time)
+not ideal: have categorical data, compare multiple variables that are not dependent on time
+
+Scatter
+best used: observe relationship between two variables, ideal for showing correlation between variables,
+spotting trends or outliers
+not ideal: large dataset makes points overlap making it hard to interpret the data
+
+Histogram
+best used: show the distribution of a single variable. Ideal for showing frequency of data intervals.
+not ideal: compare multiple variables or show the change of data over time
