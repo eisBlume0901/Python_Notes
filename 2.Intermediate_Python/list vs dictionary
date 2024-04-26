@@ -1,0 +1,11 @@
+List - index based, mutable yet allows duplicate elements, can access by their index
+Best used when:
+1. Order of elements matters
+2. Collection of times that can have duplicates
+3. Frequent modifications of elements (add, remove, update)
+
+Dictionary - key value pairs, mutable yet unique elements only, can access by their key
+Best used when:
+1. Logical association between a key-value pair
+2. Fast look up (Big-O Notation is O(1)) based on a custom key
+3. Dealing with unique keys and prevent any duplicate keys
