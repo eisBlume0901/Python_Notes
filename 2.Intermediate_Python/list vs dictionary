@@ -4,7 +4,7 @@ Best used when:
 2. Collection of times that can have duplicates
 3. Frequent modifications of elements (add, remove, update)
 
-Dictionary - key value pairs, mutable yet unique elements only, can access by their key
+Dictionary - key value pairs, mutable yet unique elements only (especially for keys), can access by their key
 Best used when:
 1. Logical association between a key-value pair
 2. Fast look up (Big-O Notation is O(1)) based on a custom key

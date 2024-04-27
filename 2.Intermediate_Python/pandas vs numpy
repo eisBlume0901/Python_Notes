@@ -1,0 +1,17 @@
+Pandas - data structure with labeled axes to prevent common errors resulting from misaligned data and working with
+differently-indexed data coming from different sources
+
+Best used when:
+1. Integrated handling of missing data
+2. Size mutability: columns can be inserted and deleted from DataFrame and higher dimensional objects
+3. Powerful, flexible group by functionality to perform split-apply-combine operations on data sets
+4. Intelligent label-based slicing, fancy indexing, and subsetting of large data sets
+5. Intuitive merging and joining data sets
+
+NumPy - used for numerical computation with C-based extension types
+
+Best used when:
+1. Performing element-wise computations with arrays or mathematical operations between arrays and
+multidimensional matrices
+2. Linear algebra operations, Fourier transform, and random number generation
+
