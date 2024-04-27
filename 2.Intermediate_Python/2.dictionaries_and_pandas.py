@@ -127,3 +127,44 @@ print()
 # If index_col is not used, the default index is integer based
 south_east_asia_countries_imported_from_csv_dataFrame_v4 = pd.read_csv('south_east_asia_countries_info.csv', index_col=0)
 print(south_east_asia_countries_imported_from_csv_dataFrame_v4)
+print()
+
+# Indexing and selecting data from dataframes
+# Using Column Access []
+# Series - one dimensional array, cannot have multiple columns
+print(south_east_asia_countries_dataFrame_v2['Countries'])
+print(type(south_east_asia_countries_dataFrame_v2['Countries']))
+print(south_east_asia_countries_dataFrame_v2['Countries'].shape) # (10, ) = 10 elements in an array
+# DataFrame - two dimensional array, can have multiple columns, each of different type
+print(south_east_asia_countries_dataFrame_v2[['Countries']])
+print(type(south_east_asia_countries_dataFrame_v2[['Countries']]))
+print(south_east_asia_countries_dataFrame_v2[['Countries']].shape) # (10, 1) = 10 rows of data and 1 column
+
+# Using Row Access []
+print(south_east_asia_countries_dataFrame_v2[1:4]) # Returns row indices inclusive of 1 to exclusive 4
+
+# Using loc() - label-position based
+# Series
+print(south_east_asia_countries_dataFrame_v2.loc['PH']) # Limited to one row of data
+# Sample Output:
+# Countries     Philippines
+# Capital            Manila
+# Area             300000.0
+# Population          110.8
+# Name: PH, dtype: object
+
+# Pandas
+print(south_east_asia_countries_dataFrame_v2.loc[['PH']])
+# Sample Output:
+#       Countries Capital      Area  Population
+# PH  Philippines  Manila  300000.0       110.8
+print(south_east_asia_countries_dataFrame_v2.loc[['PH', 'SG', 'TH']]) # Can select multiple row datas
+print(south_east_asia_countries_dataFrame_v2.loc[['PH', 'SG', 'TH'], ['Capital', 'Population']]) # Can select multiple rows of datas and intersect with its columnar variable
+
+
+# Using iloc() - integer-position based
+# Series
+print(south_east_asia_countries_dataFrame_v2.iloc[4])
+# Pandas
+print(south_east_asia_countries_dataFrame_v2.iloc[[4]])
+print(south_east_asia_countries_dataFrame_v2.iloc[[4, 3, 1], [1, 3]]) # Can select multiple rows of datas and intersect with its columnar variable
