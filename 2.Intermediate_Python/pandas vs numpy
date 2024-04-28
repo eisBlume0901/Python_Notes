@@ -1,5 +1,5 @@
 Pandas - data structure with labeled axes to prevent common errors resulting from misaligned data and working with
-differently-indexed data coming from different sources
+differently-indexed data coming from different sources. It is built in NumPy.
 
 Best used when:
 1. Integrated handling of missing data

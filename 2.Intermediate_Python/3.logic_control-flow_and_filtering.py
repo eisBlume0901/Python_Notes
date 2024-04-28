@@ -1,4 +1,5 @@
 import numpy as np
+import pandas as pd
 
 # Comparison operators: how Python variables relate and returns a boolean
 x = 2
@@ -57,8 +58,9 @@ print(np_grades[failing_grades])
 
 
 # Conditional statements (if elif else statements)
-print("Input a number", "\n")
-num = int(input())
+# print("Input a number", "\n")
+# num = int(input())
+num = 12
 
 # Logical circuiting / short circuit evaluation - will stop evaluating as soon it finds a condition that allows it to make a definitive conclusion
 if num % 10 == 0:
@@ -67,3 +69,22 @@ elif num % 2 == 0:
     print(str(num), "is an even number")
 else:
     print(str(num), "is an odd number")
+
+
+# Filtering pandas
+south_east_asia_countries_dataframe = pd.read_csv('south_east_asia_countries_info.csv', index_col=0)
+print(south_east_asia_countries_dataframe)
+
+# Returns boolean
+print(south_east_asia_countries_dataframe['Population'] > 50.0)
+
+# Returns the information about countries that have a population greater than 50.0 million
+# Uses simple boolean conditioning
+pop_greater_than_50 = south_east_asia_countries_dataframe['Population'] > 50.0
+print(south_east_asia_countries_dataframe[pop_greater_than_50])
+
+# Returns the information about countries that have a population greater than 50.0 million and has an area greater than 100.0 squared kilometers
+# Uses NumPy's logical_and()
+pop_greater_than_50_and_area_greater_than_100 = np.logical_and(south_east_asia_countries_dataframe['Population'] > 50.0,
+                                                               south_east_asia_countries_dataframe['Area'] > 100.0)
+print(south_east_asia_countries_dataframe[pop_greater_than_50_and_area_greater_than_100])
