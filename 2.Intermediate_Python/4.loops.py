@@ -211,6 +211,7 @@ print(south_east_asia_dataframe)
 
 # Version 3.B adding new column with rows of data using .apply()
 # Recommended since .apply() operates an entire row or column at once. Creating one series only
+# It is like SQL or Excel wherein you apply the changes at once which is why it is faster than using iterrows()
 south_east_asia_dataframe['name_length'] = south_east_asia_dataframe['country'].apply(len)
 print(south_east_asia_dataframe)
 
