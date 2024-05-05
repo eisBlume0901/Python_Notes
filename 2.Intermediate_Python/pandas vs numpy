@@ -1,5 +1,6 @@
 Pandas - data structure with labeled axes to prevent common errors resulting from misaligned data and working with
-differently-indexed data coming from different sources. It is built in NumPy.
+differently-indexed data coming from different sources. It is built in NumPy. Simply, pandas are high level Excel since
+it has rows and columns and data can be found through row and column.
 
 Best used when:
 1. Integrated handling of missing data

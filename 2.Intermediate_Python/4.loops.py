@@ -83,8 +83,12 @@ for character in "pythonista":
 
 
 
-# Looping Data Structures
-# Dictionaries
+# Looping Data Structures (Dictionary, Numpy, Pandas)
+# Dictionary .items()
+# Numpy .nditer()
+# Panda .iterrow()
+
+# Dictionary
 south_east_asia_countries_info = {
     'Indonesia':
         {
@@ -158,6 +162,7 @@ south_east_asia_countries_info = {
 for key, value in south_east_asia_countries_info.items():
     print(str(key) + ": " + str(value))
 
+
 # NumPy array
 np_height = np.array([1.73, 1.68, 1.71, 1.89, 1.79])
 np_weight = np.array([65.4, 59.2, 63.6, 88.4, 68.7])
@@ -179,3 +184,36 @@ for i, x in enumerate(meas):
 # nditer = nth dimensional iterator for arrays
 for val in np.nditer(meas):
     print(val)
+
+# Panda DataFrame
+south_east_asia_dataframe = pd.read_csv('south_east_asia_countries_info.csv', index_col=0)
+# Version 1 for in loop only iterates column headers
+for key in south_east_asia_dataframe:
+    print(key)
+
+# Version 2 .iterrows() - iterate rows, returns dtype: object
+for label, value in south_east_asia_dataframe.iterrows():
+    print(label)
+    print(value)
+
+# Version 2 accessing column specific rows of data in this case, Capital
+for label, row in south_east_asia_dataframe.iterrows():
+    print(label + ": " + row['capital'])
+
+# Version 3.A adding new column with rows of data
+# Not recommended since we are creating new series in each iteration that only holds one data entry.
+# This can affect the efficiency of dataframes.
+for label, row in south_east_asia_dataframe.iterrows():
+    # This creates a series on every iteration and adds a new column with rows of data (not in csv file)
+    south_east_asia_dataframe.loc[label, 'name_length'] = len(row['country'])
+
+print(south_east_asia_dataframe)
+
+# Version 3.B adding new column with rows of data using .apply()
+# Recommended since .apply() operates an entire row or column at once. Creating one series only
+south_east_asia_dataframe['name_length'] = south_east_asia_dataframe['country'].apply(len)
+print(south_east_asia_dataframe)
+
+south_east_asia_dataframe['COUNTRY'] = south_east_asia_dataframe['country'].apply(str.upper)
+print(south_east_asia_dataframe)
+
