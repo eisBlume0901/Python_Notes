@@ -76,15 +76,15 @@ south_east_asia_countries_dataframe = pd.read_csv('south_east_asia_countries_inf
 print(south_east_asia_countries_dataframe)
 
 # Returns boolean
-print(south_east_asia_countries_dataframe['Population'] > 50.0)
+print(south_east_asia_countries_dataframe['population'] > 50.0)
 
 # Returns the information about countries that have a population greater than 50.0 million
 # Uses simple boolean conditioning
-pop_greater_than_50 = south_east_asia_countries_dataframe['Population'] > 50.0
+pop_greater_than_50 = south_east_asia_countries_dataframe['population'] > 50.0
 print(south_east_asia_countries_dataframe[pop_greater_than_50])
 
 # Returns the information about countries that have a population greater than 50.0 million and has an area greater than 100.0 squared kilometers
 # Uses NumPy's logical_and()
-pop_greater_than_50_and_area_greater_than_100 = np.logical_and(south_east_asia_countries_dataframe['Population'] > 50.0,
-                                                               south_east_asia_countries_dataframe['Area'] > 100.0)
+pop_greater_than_50_and_area_greater_than_100 = np.logical_and(south_east_asia_countries_dataframe['population'] > 50.0,
+                                                               south_east_asia_countries_dataframe['area'] > 100.0)
 print(south_east_asia_countries_dataframe[pop_greater_than_50_and_area_greater_than_100])

@@ -158,7 +158,7 @@ south_east_asia_countries_info = {
         }
 }
 
-# Version 3 using for in .items()
+# Version 1 using for in .items()
 for key, value in south_east_asia_countries_info.items():
     print(str(key) + ": " + str(value))
 
@@ -175,12 +175,12 @@ for val in bmi:
 
 meas = np.array([np_height, np_weight])
 
-# Version 1 for in enumerate and using two nested for loops
+# Version 2 for in enumerate and using two nested for loops
 for i, x in enumerate(meas):
     for j, y in enumerate(x):
         print(meas[i][j])
 
-# Version 2 for in nditer(np_array) loop for 2d array
+# Version 3 for in nditer(np_array) loop for 2d array
 # nditer = nth dimensional iterator for arrays
 for val in np.nditer(meas):
     print(val)
@@ -198,7 +198,7 @@ for label, value in south_east_asia_dataframe.iterrows():
 
 # Version 2 accessing column specific rows of data in this case, Capital
 for label, row in south_east_asia_dataframe.iterrows():
-    print(label + ": " + row['capital'])
+    print(str(label) + ": " + row['capital'])
 
 # Version 3.A adding new column with rows of data
 # Not recommended since we are creating new series in each iteration that only holds one data entry.

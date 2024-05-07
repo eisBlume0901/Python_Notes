@@ -1,12 +1,12 @@
 Pandas - data structure with labeled axes to prevent common errors resulting from misaligned data and working with
 differently-indexed data coming from different sources. It is built in NumPy. Simply, pandas are high level Excel since
-it has rows and columns and data can be found through row and column.
+it has rows and columns where it stored a data.
 
 Best used when:
 1. Integrated handling of missing data
 2. Size mutability: columns can be inserted and deleted from DataFrame and higher dimensional objects
 3. Powerful, flexible group by functionality to perform split-apply-combine operations on data sets
-4. Intelligent label-based slicing, fancy indexing, and subsetting of large data sets
+4. Intelligent label-based slicing, fancy indexing, and sub-setting of large data sets
 5. Intuitive merging and joining data sets
 
 NumPy - used for numerical computation with C-based extension types
