@@ -28,8 +28,8 @@ print(employee_df[employee_named_ava]) # Subsetting using logical condition for 
 
 software_engineers = employee_df["position"] == "Software Engineer"
 employee_amelia_garcia = employee_df["name"] == "Amelia Garcia"
-print(employee_df[software_engineers | employee_amelia_garcia]) # Subsetting using logical condition with logical operators (| = or)
-print(employee_df[software_engineers & employee_amelia_garcia]) # Subsetting using logical condition with logical operators (& = and)
+print(employee_df[software_engineers | employee_amelia_garcia]) # Subsetting using logical condition with logical operators (| = or), can use np.logical_or()
+print(employee_df[software_engineers & employee_amelia_garcia]) # Subsetting using logical condition with logical operators (& = and), can use np.logical_and()
 print(employee_df[ (employee_df["position"] == "Data Scientist") & (employee_df["salary"] == 82000) ])
 
 # Subsetting using .isin()
