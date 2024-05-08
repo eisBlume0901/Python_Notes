@@ -103,7 +103,7 @@ print()
 
 # This is how the dictionary must be initialized and assigned to
 south_east_asia_countries_info_v2 = {
-    'Countries': ['Indonesia', 'Thailand', 'Malaysia', 'Singapore', 'Philippines', 'Vietnam', 'Myanmar', 'Cambodia', 'Laos', 'Brunei'],
+    'countries': ['Indonesia', 'Thailand', 'Malaysia', 'Singapore', 'Philippines', 'Vietnam', 'Myanmar', 'Cambodia', 'Laos', 'Brunei'],
     'Capital': ['Jakarta', 'Bangkok', 'Kuala Lumpur', 'Singapore', 'Manila', 'Hanoi', 'Naypyidaw', 'Phnom Penh', 'Vietiane', 'Bandar Seri Begawan'],
     'Area': [1904569, 513120, 330803, 722.5, 300000, 331212, 676578, 181035, 236800, 5765],
     'Population': [273.5, 69.8, 32.4, 5.7, 110.8, 97.3, 54.4, 16.7, 7.3, 0.4]
@@ -129,16 +129,20 @@ south_east_asia_countries_imported_from_csv_dataFrame_v4 = pd.read_csv('south_ea
 print(south_east_asia_countries_imported_from_csv_dataFrame_v4)
 print()
 
+
 # Indexing and selecting data from dataframes
 # Using Column Access []
 # Series - one dimensional array, cannot have multiple columns
-print(south_east_asia_countries_dataFrame_v2['Countries'])
-print(type(south_east_asia_countries_dataFrame_v2['Countries']))
-print(south_east_asia_countries_dataFrame_v2['Countries'].shape) # (10, ) = 10 elements in an array
+print(south_east_asia_countries_dataFrame_v2['countries'])
+print(type(south_east_asia_countries_dataFrame_v2['countries']))
+print(south_east_asia_countries_dataFrame_v2['countries'].shape) # (10, ) = 10 elements in an array
+
 # DataFrame - two dimensional array, can have multiple columns, each of different type
-print(south_east_asia_countries_dataFrame_v2[['Countries']])
-print(type(south_east_asia_countries_dataFrame_v2[['Countries']]))
-print(south_east_asia_countries_dataFrame_v2[['Countries']].shape) # (10, 1) = 10 rows of data and 1 column
+print("Result", south_east_asia_countries_dataFrame_v2[south_east_asia_countries_dataFrame_v2['countries'] == 'Philippines'])
+print(south_east_asia_countries_dataFrame_v2[['countries']])
+print(type(south_east_asia_countries_dataFrame_v2[['countries']]))
+print(south_east_asia_countries_dataFrame_v2[['countries']].shape) # (10, 1) = 10 rows of data and 1 column
+
 
 # Using Row Access []
 print(south_east_asia_countries_dataFrame_v2[1:4]) # Returns row indices inclusive of 1 to exclusive 4
@@ -148,7 +152,7 @@ print(south_east_asia_countries_dataFrame_v2[1:4]) # Returns row indices inclusi
 # Series
 print(south_east_asia_countries_dataFrame_v2.loc['PH']) # Limited to one row of data
 # Sample Output:
-# Countries     Philippines
+# countries     Philippines
 # Capital            Manila
 # Area             300000.0
 # Population          110.8
@@ -157,12 +161,13 @@ print(south_east_asia_countries_dataFrame_v2.loc['PH']) # Limited to one row of 
 # Pandas
 print(south_east_asia_countries_dataFrame_v2.loc[['PH']])
 # Sample Output:
-#       Countries Capital      Area  Population
+#       countries Capital      Area  Population
 # PH  Philippines  Manila  300000.0       110.8
 print(south_east_asia_countries_dataFrame_v2.loc[['PH', 'SG', 'TH']]) # Can select multiple row datas
 print(south_east_asia_countries_dataFrame_v2.loc[['PH', 'SG', 'TH'], ['Capital', 'Population']]) # Can select multiple rows of datas and intersect with its columnar variable
 print(south_east_asia_countries_dataFrame_v2.loc[:, ['Capital', 'Population']])
 print(south_east_asia_countries_dataFrame_v2.loc[['PH', 'SG', 'TH'], :])
+
 
 # Using iloc() - integer-position based
 # Series

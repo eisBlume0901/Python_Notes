@@ -42,6 +42,7 @@ colors = []
 for country in south_east_asia_countries:
     colors.append(col[country])
 
+plt.figure(figsize=(8, 5))
 plt.scatter(south_east_asia_gdp, south_east_asia_life_expectancy, s=np_pop, c=colors, alpha=0.8)
 plt.xticks(range(0, 81, 15))
 plt.yticks(range(60, 86, 5))
