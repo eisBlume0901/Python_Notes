@@ -1,0 +1,5 @@
+groupby - best used when you want to see summary of aggregation statistics of an existing dataframe
+
+pivot_table - best used when you want to compare data cross two or more dimensions for multidimensional analysis
+(provides different view of the data, useful for comparing values across different categories) by creating new dataframe
+from the original dataframe.

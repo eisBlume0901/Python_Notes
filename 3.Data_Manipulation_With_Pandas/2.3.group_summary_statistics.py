@@ -34,3 +34,5 @@ software_engineers_salary = employees[employees["position"] == "Software Enginee
 total_salary = employees["salary"].sum()
 proportion_of_salary = [data_analysts_salary, data_scientists_salary, product_managers_salary, software_engineers_salary] / total_salary
 print(proportion_of_salary)
+
+
