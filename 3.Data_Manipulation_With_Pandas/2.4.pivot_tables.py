@@ -1,6 +1,6 @@
 import pandas as pd
 import numpy as np
-
+    
 dogFile = pd.read_csv('dogs.csv')
 dogs = pd.DataFrame(dogFile)
 

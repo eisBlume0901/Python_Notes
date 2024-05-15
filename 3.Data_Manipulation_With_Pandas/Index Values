@@ -1,0 +1,11 @@
+Index values are just data (topic 3.slicing_indexing_dataframes.py)
+
+Indexes violate tidy data principles
+
+Tidy Data
+1. Each variable must have its own column
+2. Each observation must have its own row
+3. Each value must have its own cell
+
+(In short same with how Excel and SQL works especially
+for SQL since it has its own cell)
