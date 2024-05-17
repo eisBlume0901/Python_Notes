@@ -1,6 +1,5 @@
 import pandas as pd
-import numpy as np
-    
+
 dogFile = pd.read_csv('dogs.csv')
 dogs = pd.DataFrame(dogFile)
 
@@ -21,4 +20,5 @@ print(dogs.groupby(["breed", "color"])["weight_kg"].agg(["mean", "max", "min"]))
 
 # 'All' row and column contain the respective statistics (mean, max, min, etc., depending on the aggfunc parameter)
 # over all the data in the respective rows or columns, not just the visible data
+# Note: index allows multiple indices and columns (e.g. index=["skin_color", "eye_color"], columns=["breed","origin"])
 print(dogs.pivot_table(values="weight_kg", index="color", columns="breed", aggfunc=["mean", "max", "min"], fill_value=0, margins=True))
