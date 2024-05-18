@@ -1,0 +1,41 @@
+visited_date,name,breed,color,height_cm,weight_kg,sex
+2019-01-12,Bella,Labrador Retriever,Brown,40,10,Female
+2020-03-24,Bella,Labrador Retriever,Brown,42,11,Female
+2021-06-15,Bella,Labrador Retriever,Brown,44,12,Female
+2022-09-07,Bella,Labrador Retriever,Brown,46,13,Female
+2019-02-18,Max,Golden Retriever,Golden,50,20,Male
+2020-04-28,Max,Golden Retriever,Golden,52,21,Male
+2021-07-19,Max,Golden Retriever,Golden,54,22,Male
+2022-10-10,Max,Golden Retriever,Golden,56,23,Male
+2019-03-22,Charlie,Beagle,Black,30,8,Male
+2020-05-30,Charlie,Beagle,Black,32,9,Male
+2021-08-20,Charlie,Beagle,Black,34,10,Male
+2022-11-11,Charlie,Beagle,Black,36,11,Male
+2019-04-15,Lucy,French Bulldog,Gray,25,7,Female
+2020-06-20,Lucy,French Bulldog,Gray,26,8,Female
+2021-09-25,Lucy,French Bulldog,Gray,27,9,Female
+2022-12-15,Lucy,French Bulldog,Gray,28,10,Female
+2019-05-10,Cooper,German Shepherd,Black,60,30,Male
+2020-07-15,Cooper,German Shepherd,Black,62,32,Male
+2021-10-30,Cooper,German Shepherd,Black,64,34,Male
+2022-01-20,Cooper,German Shepherd,Black,66,36,Male
+2019-06-05,Daisy,Bulldog,White,35,15,Female
+2020-08-10,Daisy,Bulldog,White,36,16,Female
+2021-11-15,Daisy,Bulldog,White,37,17,Female
+2022-02-25,Daisy,Bulldog,White,38,18,Female
+2019-07-01,Rocky,Rottweiler,Black,65,35,Male
+2020-09-05,Rocky,Rottweiler,Black,67,37,Male
+2021-12-20,Rocky,Rottweiler,Black,69,39,Male
+2022-03-30,Rocky,Rottweiler,Black,71,41,Male
+2019-08-20,Sadie,Poodle,White,30,10,Female
+2020-10-25,Sadie,Poodle,White,31,11,Female
+2021-01-30,Sadie,Poodle,White,32,12,Female
+2022-04-30,Sadie,Poodle,White,33,13,Female
+2019-09-15,Jack,Yorkshire Terrier,Brown,20,5,Male
+2020-11-20,Jack,Yorkshire Terrier,Brown,21,6,Male
+2021-02-25,Jack,Yorkshire Terrier,Brown,22,7,Male
+2022-05-30,Jack,Yorkshire Terrier,Brown,23,8,Male
+2019-10-10,Molly,Boxer,Black,55,25,Female
+2020-12-15,Molly,Boxer,Black,57,27,Female
+2021-03-30,Molly,Boxer,Black,59,29,Female
+2022-06-30,Molly,Boxer,Black,61,31,Female

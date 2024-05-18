@@ -18,5 +18,6 @@ print(unique_dogs["breed"].value_counts(normalize=True)) # Returns relative freq
 
 dog_df["is_light"] = dog_df["weight_kg"] < 60
 light_dogs = dog_df[dog_df["is_light"]].drop_duplicates("visited_date") # It returns the date when does light dogs visit
+print(light_dogs)
 print(light_dogs.shape) # 19, 5
 
