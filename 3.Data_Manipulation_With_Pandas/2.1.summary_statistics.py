@@ -38,7 +38,7 @@ print(software_engineers["salary"].agg(getFirstQuartile)) # Can be done this way
 print(software_engineers[["salary", "annual_salary"]].agg(getFirstQuartile))
 
 # Multiple columns in multiple aggregation
-print(software_engineers[["salary", "annual_salary"]].agg([getFirstQuartile, getSecondQuartile, "median", ]))
+print(software_engineers[["salary", "annual_salary"]].agg([getFirstQuartile, getSecondQuartile, "median", "max"]))
 
 # Aggregations = mean(), sum(), size(), count(), std(), var(), describe(), first(), last(), nth(), min(), max()
 # Non-aggregations = cumsum(), cumprod(), cummax(), cummin()
@@ -65,3 +65,14 @@ print(cumulative_sum_of_salary_for_software_engineers)
 
 software_engineers = software_engineers.copy()
 software_engineers.loc[:, "cumulative_sum_max"] = software_engineers["salary"].cummax()
+
+# CONVERTING SUMMARY STATISTICS TO DATAFRAME
+job_positions = employee_df.groupby("position")["salary"].agg(["max", "min", "std", "mean", "count"]).round()
+print(job_positions)
+
+job_positions_df = job_positions.rename(columns={"count": "num_positions", "max": "max_salary", "min": "min_salary", "mean": "average_salary", "std": "average_salary"})
+print(job_positions_df)
+
+# Adds integer indices
+job_positions_df.reset_index(inplace=True)
+print(job_positions_df)

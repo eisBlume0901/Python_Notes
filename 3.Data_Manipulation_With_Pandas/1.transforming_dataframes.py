@@ -4,6 +4,7 @@ import pandas as pd
 employeeFile = pd.read_csv('employee.csv')
 employee_df = pd.DataFrame(employeeFile)
 print(employee_df.head()) # Returns the first 5 data
+print(employee_df.head(10)) # Returns the first 10 data
 print(employee_df.info()) # Displays the name and type of columns (This is quite the same with SQL using terminal based)
 print(employee_df.shape) # Returns the number of rows and column of a dataframe datastructure, shape is an attribute not a method
 print(employee_df.describe()) # Returns a descriptive statistics of integer such as count, mean, std, min, max, quartile
