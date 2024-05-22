@@ -1,5 +1,6 @@
 import pandas as pd
 
+# INCLUDES TOPIC about sorting values of a dataframe
 employeeFile = pd.read_csv('employee.csv')
 employee_df = pd.DataFrame(employeeFile)
 print(employee_df.head()) # Returns the first 5 data
