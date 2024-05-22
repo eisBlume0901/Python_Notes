@@ -16,6 +16,11 @@ print(dog_colors)
 # Retrieves the mean of the pivot_table through column (calculating mean across column)
 print(dogs_height_by_breed_vs_color.mean(axis="columns")) # Calculates the mean of different colors with the same breed
 
+# Retrieves the maximum height in each dog breed type
+print(dogs_height_by_breed_vs_color.max(axis="columns"))
+
+# Retrieves the minimum height in each dog breed type
+print(dogs_height_by_breed_vs_color.min(axis="columns"))
 
 # Ensure the 'visited_date' column is of datetime type
 dogs['visited_date'] = pd.to_datetime(dogs['visited_date'])
