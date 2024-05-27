@@ -1,18 +1,17 @@
 import pandas as pd
 
-animesFile = pd.read_csv('animes.csv')
-animeGenresFile = pd.read_csv('anime_genres.csv')
-genresFile = pd.read_csv('genres.csv')
+customersFile = pd.read_csv('customers.csv')
+ordersFile = pd.read_csv('orders.csv')
 
-animes = pd.DataFrame(animesFile)
-anime_genres = pd.DataFrame(animeGenresFile)
-genres = pd.DataFrame(genresFile)
+customers = pd.DataFrame(customersFile)
+orders = pd.DataFrame(ordersFile)
 
 pd.set_option('display.max_columns', None)  # None means unlimited
 pd.set_option('display.expand_frame_repr', False)  # Don't wrap to multiple pages
 pd.set_option('display.max_rows', None)  # None means unlimited
 
-# Outer join is opposite of inner join which joins both left and right regardless if each of them contains null, expect both sides to return null
-fantasy_genre = anime_genres[anime_genres["genre_id"] == 5]
-fantasy_animes = animes.merge(fantasy_genre, how="outer", left_on="id", right_on="anime_id", suffixes=("_a", "_ag"))
-print(fantasy_animes)
+customers_orders = customers.merge(orders, how="outer", on="customer_id", suffixes=("_c", "_o"))
+print(customers_orders)
+
+print("Customers that does not have any orders")
+print(customers_orders[customers_orders["product"].isnull()]["customer_name"])

@@ -1,4 +1,5 @@
 import pandas as pd
+import matplotlib.pyplot as plt
 
 animesFile = pd.read_csv('animes.csv')
 animeGenresFile = pd.read_csv('anime_genres.csv')
@@ -16,17 +17,12 @@ print(animes.shape)
 print(anime_genres.shape)
 print(genres.shape)
 
-merged_anime_genres = animes.merge(anime_genres, left_on="id", right_on="anime_id", suffixes=("_a", "_ag"))
-print(merged_anime_genres.shape)
-print(merged_anime_genres)
+genre_animes = anime_genres.merge(animes, how="right", left_on="anime_id", right_on="id", suffixes=("_ag", "_a"))
+print(genre_animes)
+genre_count = genre_animes.groupby("genre_id").agg({'anime_id' : 'count'})
+genre_count.plot(kind="bar")
+plt.tight_layout()
+plt.show()
 
-action_genre = anime_genres[anime_genres["genre_id"] == 4]
-print(action_genre)
-
-
-drama_animes = action_genre.merge(animes, how="right", left_on="anime_id", right_on="id", suffixes=("_a", "_ag")).merge(genres, left_on="genre_id", right_on="id")
-print(drama_animes[["type", "title"]])
-
-drama_animes = action_genre.merge(animes, how="right", left_on="anime_id", right_on="id", suffixes=("_a", "_ag"))
-print(drama_animes)
-
+genre_animes_with_name = genre_animes.merge(genres, how="left", left_on="genre_id", right_on="id", suffixes=("_ag2", "_g"))
+print(genre_animes_with_name)
