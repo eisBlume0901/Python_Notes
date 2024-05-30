@@ -1,0 +1,9 @@
+id,full_name,salary,manager_id
+1,John Smith,10000,3
+2,Jane Anderson,12000,3
+3,Tom Lanon,15000,4
+4,Anne Connor,20000
+5,Jeremy York,9000,1
+6,Claire Ethereal,40000
+7,Emerald Greenleaf,30000,6
+8,Mari Browns,25000,6
