@@ -47,6 +47,8 @@ print(top_genres_in_anime)
 genres_in_anime = genres.merge(animes_genres, left_on="id", right_on="genre_id", how="left", indicator=True)
 print(genres_in_anime)
 
+# genres_in_anime.loc[genres_in_anime["_merge"] == "left_only", "type"]: This expression uses loc to select rows and a specific column in the DataFrame.
+# It selects the rows where the condition is True (i.e., where _merge is "left_only"), and it selects the "type" column.
 genres_without_animes = genres_in_anime.loc[genres_in_anime["_merge"] == "left_only", "type"]
 uncommon_genres_in_anime = genres[genres["type"].isin(genres_without_animes)]
 print(uncommon_genres_in_anime)

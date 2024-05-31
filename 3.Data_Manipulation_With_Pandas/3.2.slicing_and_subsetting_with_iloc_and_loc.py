@@ -15,6 +15,7 @@ print(dogs.loc[:, "name":"breed"])
 
 # Can only sort and slice if its sorted which makes sense because if we just
 # set the index without sorting it would not be able to specify the start and end labels
+# can set hierarchical indexes / multiple indexes
 dogs_in_order = dogs.set_index(["breed", "color"]).sort_index(level=["breed", "color"])
 
 # Slicing based on the outer index
