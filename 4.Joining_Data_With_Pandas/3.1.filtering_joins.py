@@ -1,13 +1,13 @@
 import pandas as pd
 
-# Semi-joins - does not include any columns from the second table (it is not a left-join,
-# NOTE IT IS MORE OF A FILTERING OPERATION rather THAN JOINING OPERATION)
+# Semi-joins - does not include any columns from the second table but includes the matching data between two tables
+# (it is not a left-join, NOTE IT IS MORE OF A FILTERING OPERATION rather THAN JOINING OPERATION)
 
 # Steps of Semi Joins
 # Load two dataframes you want to join
 # Identify the common columns between two dataframes
-# Use isin() function to filter rows from the first dataframe that have a match in the second dataframe (this will return boolean Series)
-# Use this boolean Series to index into first dataframe. This will return a new dataframe
+# Use isin() function to filter rows from the first dataframe that have a MATCH in the second dataframe (this will return boolean Series)
+# Use this boolean Series to index into first dataframe. This will return a filtered dataframe
 
 
 animesFile = pd.read_csv('animes.csv')
@@ -34,3 +34,19 @@ print(most_common_genres_in_anime)
 top_genres_in_anime = anime_and_its_genres.groupby("type").agg({"type": "count"})
 print(top_genres_in_anime)
 
+
+# Anti-joins - does not include any columns from the second table but excludes the matching data or returns no matches between two tables
+
+# Steps of Anti-Joins
+# Load two dataframes
+# Identify the common columns between two dataframes
+# Use isin() function to filter rows from the first dataframe that does NOT HAVE A MATCH in the second dataframe
+# Use this boolean series to index into first dataframe. This will return a filtered dataframe
+
+# Note, indicator shows the source of each record. both means both are existing in two tables, left_only means existing only in left table
+genres_in_anime = genres.merge(animes_genres, left_on="id", right_on="genre_id", how="left", indicator=True)
+print(genres_in_anime)
+
+genres_without_animes = genres_in_anime.loc[genres_in_anime["_merge"] == "left_only", "type"]
+uncommon_genres_in_anime = genres[genres["type"].isin(genres_without_animes)]
+print(uncommon_genres_in_anime)
