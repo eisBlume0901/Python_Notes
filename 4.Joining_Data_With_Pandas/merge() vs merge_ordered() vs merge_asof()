@@ -23,8 +23,20 @@ Differences between `merge`, `merge_ordered`, and `merge_asof`
 - Default type of join: left
 - Calling the method: `pd.merge_asof(df1, df2)` (df1 is left, df2 is right)
 - Similar to `merge_ordered`, but instead of aligning pairs of data points that have exactly the same key,
-    it aligns pairs that have the nearest (not necessarily identical) key using direction="forward" (greater than or equal to),
-    direction="backward" (less than or equal to)
+    it aligns pairs that have the nearest (not necessarily identical) key using
+    direction="forward" exact match in the right dataframe, if there isn't then pandas will use the next value that is GREATER than the merge key (left)
+    direction="backward" exact match in the right dataframe, if there isn't then pandas will use the last match (will use the previous value that is LESS than the merge key)
+    direction="nearest" closest in absolute distance to the merge key (if there are two equally distant matches, pandas will use the first match)
+
+    Example:
+
+    merge key (df left)
+    2024-01--01 10:30:00
+
+    df right
+    2024-01-01 10:20:00 (backward)
+    2024-01-01 10:35:00 (forward, nearest)
+    2024-01-01 10:40:00
 - Useful when working with time series data where you want to align the two dataframes by the closest time
     rather than exactly matching times (e.g., Data sampled form a process, Developing a training set (no data leakage)
 - Requires the key columns in both dataframes to be sorted
