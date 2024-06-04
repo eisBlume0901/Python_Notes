@@ -1,0 +1,31 @@
+Similarities between `merge`, `merge_ordered`, and `merge_asof`
+- Column(s) to join on: `on`, `left_on`, `right_on`
+- Type of join: `how` (left, right, inner, outer)
+- Overlapping column names: `suffixes`
+
+Differences between `merge`, `merge_ordered`, and `merge_asof`
+
+`merge`
+- Default type of join: inner
+- Calling the method: `df1.merge(df2)` (df1 is left, df2 is right)
+- Similar to the JOIN operation in SQL
+- Does not necessarily preserve the order of the data
+
+`merge_ordered`
+- Default type of join: outer
+- Calling the method: `pd.merge_ordered(df1, df2)` (df1 is left, df2 is right)
+- Useful when working with ordered data like time series data
+- Performs a merge with an optional filling/interpolation of missing data using fill_method="ffill"
+- Preserves the order of the data
+
+
+`merge_asof`
+- Default type of join: left
+- Calling the method: `pd.merge_asof(df1, df2)` (df1 is left, df2 is right)
+- Similar to `merge_ordered`, but instead of aligning pairs of data points that have exactly the same key,
+    it aligns pairs that have the nearest (not necessarily identical) key using direction="forward" (greater than or equal to),
+    direction="backward" (less than or equal to)
+- Useful when working with time series data where you want to align the two dataframes by the closest time
+    rather than exactly matching times (e.g., Data sampled form a process, Developing a training set (no data leakage)
+- Requires the key columns in both dataframes to be sorted
+- Does not support 'outer' or 'right' as join types

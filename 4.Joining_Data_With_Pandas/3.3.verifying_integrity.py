@@ -12,7 +12,8 @@ pd.set_option('display.max_columns', None)  # None means unlimited
 pd.set_option('display.expand_frame_repr', False)  # Don't wrap to multiple pages
 pd.set_option('display.max_rows', None)  # None means unlimited
 
-anime_and_its_genres = animes.merge(anime_genres, left_on="id", right_on="anime_id", validate='one_to_many', suffixes=("_a", "_ag")).merge(genres, left_on="id_ag", right_on="id", suffixes=("_ag1", "g"), validate="one_to_many")
+anime_and_its_genres = animes.merge(anime_genres, left_on="id", right_on="anime_id", validate='one_to_many', suffixes=("", "_ag")).merge(genres, left_on="id_ag", right_on="id", suffixes=("_a", "_g"), validate="one_to_many")
+print(anime_and_its_genres)
 print(anime_and_its_genres[["title", "studio", "type"]]) # It is expected to not return any errors
 
 # anime_and_its_genres_v1 = animes.merge(anime_genres, left_on="id", right_on="anime_id", validate='many_to_one', suffixes=("_a", "_ag")).merge(genres, left_on="id_ag", right_on="id", suffixes=("_ag1", "g"), validate="one_to_many")
