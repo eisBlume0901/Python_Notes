@@ -1,0 +1,8 @@
+concat()
+- concatenate two or more DataFrames along a particular axis (axis=0 and axis=1)
+- has additional parameters such as keys, levels, names, verify_integrity, sort, copy
+- efficient as it concatenates all at once
+append
+- concatenate two DataFrames along the axis=0
+- does not have additional parameters
+- slightly faster than concat (but concatenates two at a time)

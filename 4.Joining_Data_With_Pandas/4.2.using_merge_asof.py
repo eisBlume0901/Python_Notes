@@ -33,7 +33,7 @@ gdp["date"] = pd.to_datetime(gdp["date"])
 recession_status["date"] = pd.to_datetime(recession_status["date"])
 
 gdp_recession_status = pd.merge_asof(gdp, recession_status, on="date")
-is_recession = ['b' if s=="recession" else "y" for s in gdp_recession_status["econ_status"]]
+is_recession = ['blue' if s=="recession" else 'orange' for s in gdp_recession_status["econ_status"]]
 gdp_recession_status.plot(kind="bar", y="gdp", x="date", color=is_recession, rot=90)
 plt.tight_layout()
 plt.show()
