@@ -1,0 +1,23 @@
+Left-skewed / Negatively-skewed
+- mean is less than median, and the median is less than the mode
+- median is often a better measure of central tendency
+- Examples:
+    Age at retirement (most people retire around the same age, but some retire much earlier
+    Scores on a very easy exam (most students score high, but a few score very low)
+Right-skewed / Positively-skewed
+- mean is greater than the median, and the median is greater than the mode
+- mean is often a better measure of central tendency
+- Examples:
+    Income (most people earn at a moderate amount, but a few earn exceptionally high incomes)
+    Time to complete a task (most people finish quickly, but a few take much longer)
+
+Notes:
+1. Central Tendency: Always use the MEDIAN as the measure of central tendency rather than the mean in skewed distributions,
+as it is less affected by extreme values
+2. Spread: Interquartile Range (IQR) is a better measure of spread than the standard deviation in skewed distributions since
+it is not influenced by outliers.
+3. Impact of Skewness: Some tests assume normality (no skewness), so alternative non-parametric tests might be appropriate
+4. Data Transformation: Consider transforming the data to reduce skewness (e.g., log transformation, square root transformation)
+if a normal distribution is required for analysis
+5. Always visualize the data using HISTOGRAMS, box plots, or Q-Q plots to get a sense of the distribution and the presence
+of skewness
