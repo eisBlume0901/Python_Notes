@@ -34,3 +34,6 @@ print(three_month_expenses) # If index is not ignored, it will throw an error Va
 
 three_month_expenses_v1 = pd.concat([june_exp, july_exp, august_exp], keys=["June", "July", "August"], verify_integrity=True)
 print(three_month_expenses_v1)
+
+three_month_expenses_v2 = pd.concat([june_exp, july_exp, august_exp], keys=["June", "July", "August"], verify_integrity=False)
+print(three_month_expenses_v2)
