@@ -1,0 +1,58 @@
+Measures of spread / variability / dispersion - how tightly clustered or spread out data values are
+- The higher the result, the more spread out the data with respect to mean
+- Measure of spread is highly dependent on the distribution of data and the specific goals of analysis
+
+Sensitive to outliers - suitable to normal distributions
+1. Variance / mean-squared error
+2. Standard Deviation / L2 norm / Euclidean Distance
+3. Range
+
+Robust to outliers - suitable for skewed distributions
+1. Mean Absolute Deviation / L1 norm / Manhattan Distance / Rectilinear Distance
+2. Median Absolute Deviation
+    a. Median = 50th Quantile = 50th Percentile
+Order Statistics- important in identifying outliers (especially for large volumes of data),
+its extent of impact in the distribution, and identify any skewness or asymmetry. Also, it is useful
+for providing valuable summary of the entire distribution.
+3. Quantile - dividing dataset into equal portions (quartiles = 4 parts, quintiles = 5 parts)
+4. Decile - divides the data into ten equal parts
+5. Percentile - divides the data into hundred equal parts
+6. Interquartile Range (IQR) - difference between 25th and 75th percentile
+
+Why squared deviations and positive values matter with respect to the mean:
+
+- Squaring deviations ensures all are positive, preventing cancellation of positive and negative deviations,
+which can skew results.
+- Emphasizes larger deviations, crucial for understanding spread:
+  - Simplifies calculations.
+  - Provides smoother functions for analysis.
+- Maintains consistency with the concept of variability:
+  - Variability represents differences from the mean, inherently positive or zero.
+- Example: Heights - deviation from average height, which is always positive, helps in consistent comparison
+across datasets.
+
+How to get quantiles?
+{65, 72, 78, 80, 85, 87, 90, 92, 95, 98}
+
+Here's how we can calculate quartiles for this dataset:
+
+1. Sort the Data:
+   - Sorted dataset: {65, 72, 78, 80, 85, 87, 90, 92, 95, 98}
+
+2. Identify the Positions of Quartiles:
+   - Q1 (25th percentile): (25/100) × (10 - 1) = 2.25 (Interpolate between the 2nd and 3rd values)
+   - Q2 (50th percentile, also the median): (50/100) × (10 - 1) = 4.5 (Interpolate between the 4th and 5th values)
+   - Q3 (75th percentile): (75/100) × (10 - 1) = 6.75 (Interpolate between the 6th and 7th values)
+
+3. Extract the Quartiles:
+   - Q1: Interpolated between the 2nd and 3rd values: Q1 = 72 + 0.25 × (78 - 72) = 73
+   - Q2 (median): Interpolated between the 4th and 5th values: Q2 = 80 + 0.5 × (85 - 80) = 82.5
+   - Q3: Interpolated between the 6th and 7th values: Q3 = 87 + 0.75 × (90 - 87) = 88.75
+
+So, the quartiles for this dataset are Q1 = 73, Q2 = 82.5 (median), and Q3 = 88.75.
+
+These quartiles help us understand the distribution of exam scores and identify key points within the dataset,
+such as the range of scores for the middle 50% of students.
+
+Supplemental sources:
+1. https://youtu.be/yCDevFTNbC0

@@ -1,12 +1,14 @@
 Left-skewed / Negatively-skewed
 - mean is less than median, and the median is less than the mode
 - median is often a better measure of central tendency
+- mode > median > mean
 - Examples:
     Age at retirement (most people retire around the same age, but some retire much earlier
     Scores on a very easy exam (most students score high, but a few score very low)
 Right-skewed / Positively-skewed
 - mean is greater than the median, and the median is greater than the mode
 - mean is often a better measure of central tendency
+- mean > median > mode
 - Examples:
     Income (most people earn at a moderate amount, but a few earn exceptionally high incomes)
     Time to complete a task (most people finish quickly, but a few take much longer)

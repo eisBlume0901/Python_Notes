@@ -1,0 +1,14 @@
+Mode
+- can be non-unique or not exist at all
+- for continuous data, the mode can be less meaningful because the exact same value might not be repeated often
+- useful: categorical data where we want to know the most common category (e.g., most popular product)
+Mean
+- provides a unique central tendency that takes into account every data point in the dataset
+- especially useful for data that are symmetrically distributed and without outliers
+- useful: quantitative analysis such as calculating averages, in financial metrics, and in most statistical analyses
+that assume normally distributed data
+Median
+- always unique and represents the middle value of a dataset making it a robust measure of central tendency
+- especially useful for skewed distributions and datasets with outliers, as it is not affected by extreme values
+- useful: economics, real estate where data often have skewed distributions (e.g., income, property prices - since not a
+lot of people have high income)
