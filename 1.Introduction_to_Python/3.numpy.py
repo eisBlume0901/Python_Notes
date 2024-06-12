@@ -95,5 +95,7 @@ print(np.corrcoef(np_2d_grades_study_time[0], np_2d_grades_study_time[1])) # mea
 
 # Generating random normal distribution
 intelligent_quotient = np.round(np.random.normal(99, 10, 100), 0)
+# loc = mean ("center" of the distribution), scale = standard deviation (spread or "width") of the distribution
+# size = number of samples
 print(intelligent_quotient)
 

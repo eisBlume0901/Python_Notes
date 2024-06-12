@@ -1,0 +1,7 @@
+groupby - split the data into groups based on some criteria then followed by
+aggregation functions (like sum, mean, count) to compute statistics for each group
+- it returns DataFrame
+
+value_counts - used to get a Series containing counts of unique values in descending order
+so that the first element is the most-frequently occurring element.
+- it returns Series

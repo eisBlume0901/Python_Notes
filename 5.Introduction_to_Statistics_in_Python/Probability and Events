@@ -1,0 +1,21 @@
+Independent events
+- two events are independent if the probability of the second event IS NOT affected
+by the outcome of the first event
+- example: flipping a coin and got an outcome as a head first, then flipping a coin and got another outcome as tail for second attempt
+    Regardless of the attempts, whether we get a head or tail, every time a coin is flip a head will get 50% chance which is also the same with tail
+
+Dependent events
+- two events are dependent if the probability of the second event IS AFFECTED
+by the outcome of the first event
+- example: choosing a card from a deck and then choosing another without putting the first card back in the deck
+
+Sample with replacement (an example for independent event)
+Examples:
+1. Rolling a die twice
+2. Flipping a coin 3 times
+
+Sample without replacement (an example for a dependent event)
+Examples:
+1. Randomly picking 3 people to work on weekend from a group of 20 people
+2. From a deck of cards, dealing 3 players 7 cards each
+3. Randomly selecting 5 products from the assembly line to test for quality assurance
