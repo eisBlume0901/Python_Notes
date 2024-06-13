@@ -24,6 +24,6 @@ print(shoemakers_orders_customers.loc[filterCriteria, 'quantity'].sum())
 
 # Reminder: groupby allows you to categorize data through a specific column variable and get their descriptive statistics.
 print("Total Number of Orders for Each Shoes")
-print(shoemakers_orders_customers.groupby(shoemakers_orders_customers["product"], as_index=False).agg({"quantity": "sum"}))
+print(shoemakers_orders_customers.groupby("product", as_index=False).agg({"quantity": "sum"}))
 # grouped = df.groupby(['column1', 'column2'], as_index=False).agg({'column3':'sum'})
 # as_index means the group labels are not set as index, they remain as columns and their default integer index is used
