@@ -21,6 +21,7 @@ Differences between `merge`, `merge_ordered`, and `merge_asof`
 
 `merge_asof`
 - Default type of join: left
+- It does not have any optional filling/interpolation so expect NaN
 - Calling the method: `pd.merge_asof(df1, df2)` (df1 is left, df2 is right)
 - Similar to `merge_ordered`, but instead of aligning pairs of data points that have exactly the same key,
     it aligns pairs that have the nearest (not necessarily identical) key using
