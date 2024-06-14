@@ -28,3 +28,13 @@ print(sales_df.sample(2)) # retrieves 2 data from the dataframe
 
 # Sample with replacement (is an example of an Independent event)
 print(sales_df.sample(5, replace=True))
+
+# Calculating the probability of choosing each product type from all product types
+amirDealsFile = pd.read_csv("amir_deals.csv")
+amir_deals = pd.DataFrame(amirDealsFile)
+print(amir_deals.head(3))
+
+counts = amir_deals.value_counts("product")
+print((counts / counts.sum()) * 100) # in percentage
+# For instance, there are 34.8% product B will be chosen among all products
+
