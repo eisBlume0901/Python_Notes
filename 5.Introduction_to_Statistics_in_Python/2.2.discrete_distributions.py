@@ -21,9 +21,9 @@ print(np.sum(size_distribution)) # Sum of probabilities is always 1 means that a
 # Expected Value / Mean Probability Distribution
 # Purposes:
 # Central tendency = average value of a random variable
-# Long term expectation = average value you would expected over many repetitions of an experiment or random process
+# Long term expectation = average value you would expect over many repetitions of an experiment or random process
 #   Individual outcomes can vary, but the average converges to the expected value
-expected_value = np.sum(size_distribution.index * size_distribution.values) # 2.90
+expected_value = np.sum(size_distribution.index * size_distribution.values) # Expected average group size will be 2.9 or 3 (since there is not a 2.9 person)
 print(expected_value)
 
 # Discrete Probability Distribution for 4 people or more
