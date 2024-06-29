@@ -1,4 +1,5 @@
 # Binomial distributions https://youtu.be/rvg9oUHtX50
+# - subset of discrete probability distribution
 
 # BINS
 # Binary Outcomes - only deals with success or fail
