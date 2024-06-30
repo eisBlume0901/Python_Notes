@@ -8,6 +8,7 @@
 # - probability of some number of events occurring over a fixed period of time
 # - subset of discrete probability distribution
 # - time is irrelevant
+# - always right skewed (since they are no events that are negative as the number of times an event occurs is at a fixed interval of time or space)
 # Examples:
 # Probability of greater than or equal to 5 animals adopted from an animal shelter per week
 # Probability of 12 people arriving at a restaurant per hour
