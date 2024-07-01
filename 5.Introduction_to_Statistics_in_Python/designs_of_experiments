@@ -1,0 +1,47 @@
+Vocabulary:
+
+Experiment aims to answer: What is the effect of the treatment on the response?
+
+- Treatment = explanatory / independent (x) variable
+- Response = response / dependent (y) variable
+
+Controlled Experiments
+- Participants are assigned by researchers to either treatment or control group
+- Example:
+- A/B Testing
+    Treatment group sees advertisement
+    Control group does not
+        Groups should be comparable so that causation can be inferred. If groups are not comparable, this could
+        lead to confounding (bias)
+            Treatment group average age: 25
+            Control group average age: 50
+            Age is a potential confounder
+               - This experiment would lead bias saying that the advertisement only works for younger aged group
+
+
+The gold standard of experiments will use either
+1. Randomized controlled trial
+    Participants are assigned to treatment/control randomly, not based on any other characteristic (like the age confounder example)
+    Choosing randomly helps ensure that groups are comparable
+2. Placebo
+    Resembles treatment, but has no effect
+    Participant will not know which group they are in (to eliminate bias and let the participants act on what the researcher wants to gain from them)
+        Example: In clinical trials, a sugar pill ensures that the effect of the drug is actually due to the drug itself and not the idea of receiving the drug
+3. Double-blind trial
+    Person administering the treatment/running the study does not know whether the treatment is real or a placebo
+    Prevents bias in the response and/or analysis of results
+
+Fewer opportunities for bias = more reliable conclusion about causation
+
+Observational Studies
+- Participants are not assigned randomly to groups
+    Participants assign themselves, usually based on pre-existing characteristics
+- Many research questions are not conducive to a controlled experiments
+    Example: You cannot force someone to smoke or have a disease
+    You cannot make someone have certain past behavior
+- Establish association, not causation
+    Effects can be confounded by factors that got certain people into the control or treatmnet group
+    The are ways to control for confounders to get more reliable conclusions about association
+
+Longitudinal - followed over a period of time to examine the effect of treatment on response
+Cross-sectional - collected from a single snapshot of time (effect of age on height is confounded by generation)
