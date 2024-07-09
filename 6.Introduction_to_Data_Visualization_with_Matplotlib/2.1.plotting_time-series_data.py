@@ -22,9 +22,9 @@ global_temperature = temperature_data[temperature_data["Entity"] == "Global"]
 global_temperature_df = pd.DataFrame(global_temperature)
 global_temperature_df_v2 = global_temperature_df.set_index("Year")
 print(global_temperature_df_v2.tail())
-global_temperature_df_v2.index = global_temperature_df_v2.index.astype(str) + "-01-01"
-print(global_temperature_df_v2.head())
-print(global_temperature_df_v2.tail())
+# global_temperature_df_v2.index = global_temperature_df_v2.index.astype(str) + "-01-01"
+# print(global_temperature_df_v2.head())
+# print(global_temperature_df_v2.tail())
 
 
 figure, axis = plt.subplots(2, 1)
@@ -37,5 +37,15 @@ axis[1].set_xlabel("Year")
 axis[1].set_ylabel("Global average temperature")
 
 plt.subplots_adjust(wspace=0.3, hspace=0.3)
+
+plt.show()
+
+# Using the data from DataCamp, parse_dates is fine to use as long as the index is already date
+climate_change_csv_file = pd.read_csv('climate_change.csv', parse_dates=True, index_col="date")
+figure1, axis1 = plt.subplots(2, 1)
+
+seventies = climate_change_csv_file["1970-01-01": "1979-12-31"]
+axis1[0].plot(seventies.index, seventies["co2"])
+axis1[1].plot(seventies.index, seventies["relative_temp"])
 
 plt.show()
