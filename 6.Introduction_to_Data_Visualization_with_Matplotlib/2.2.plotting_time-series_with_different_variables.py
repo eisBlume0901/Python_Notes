@@ -32,3 +32,4 @@ plot_timeseries(axis, climate_change.index, climate_change["co2"], "orange", "Ti
 axis2 = axis.twinx()
 plot_timeseries(axis2, climate_change.index, climate_change["relative_temp"], "blue", "Time", "Relative Temperature (Celsius)")
 plt.show()
+
