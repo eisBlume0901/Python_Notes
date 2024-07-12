@@ -1,4 +1,4 @@
-List - index based, mutable yet allows duplicate elements, can access by their index
+ List - index based, mutable yet allows duplicate elements, can access by their index
 Best used when:
 1. Order of elements matters
 2. Collection of times that can have duplicates
