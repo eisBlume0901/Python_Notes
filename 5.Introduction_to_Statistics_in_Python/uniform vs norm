@@ -1,0 +1,20 @@
+Uniform Distribution
+Shape: Flat where each outcome in a specified range is equally likely
+Characteristics:
+- continuous or discrete
+- all outcomes in the range have the same probability
+- defined by a minimum and maximum values
+Applications:
+- rolling a die, random generation within a range
+
+Normal Distribution
+Shape: Bell-shaped curve that is symmetric around the mean
+Characteristics
+- the mean, median, and mode of the distribution are equal
+- the total area under the curve equals 1
+- defined by two parameters: mean and standard deviation
+- empirical rule: 68% of data within 1 standard deviation, 95% within 2 standard
+deviations, 99.7% within 3 standard deviations
+Applications
+- modelling continuous data that clusters around a central value
+- IQ scores, heights, measurement errors

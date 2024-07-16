@@ -30,4 +30,8 @@ np.random.seed(334)
 # Generating 1000 wait times between 0 and 30
 waiting_times = uniform.rvs(min_time, max_time, size=1000)
 plt.hist(waiting_times)
+plt.xlabel("Number of Minutes")
+plt.ylabel("Frequency")
+
+# It is highly likely that Amir will wait less than or equal to 5 minutes
 plt.show()

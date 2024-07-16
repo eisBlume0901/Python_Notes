@@ -25,12 +25,14 @@ print(food_consumption["co2_emission"].quantile(np.linspace(0, 1, 11)))
 # Histogram
 print(food_consumption.groupby("food_category")["co2_emission"].agg(["var", "std"]))
 food_consumption[food_consumption["food_category"] == "beef"].plot(kind="hist", x="co2_emission")
+plt.title("Distribution of CO2 emission for beef consumption")
 plt.show()  # Positively/right skewed - recommended to use median
 
 food_consumption[food_consumption["food_category"] == "pork"].plot(kind="hist", x="co2_emission")
+plt.title("Distribution of CO2 emission for pork consumption")
 plt.show()  # Positively/right skewed - recommended to use median
 
-# Mean Absolute Deviation (if you want to get the Median Absolute Deviation, you have to just use np.median)
+# Calculating mean absolute deviation (MAD)
 rice_consumption_co2_emission = food_consumption[food_consumption["food_category"] == "rice"]["co2_emission"]
 print(np.mean(np.abs(rice_consumption_co2_emission - np.mean(rice_consumption_co2_emission))))
 

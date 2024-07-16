@@ -47,4 +47,6 @@ print(rice_consumption["co2_emission"].agg(["mean", "median"])) # Mean 37.5, Med
 print("Mode: ", stat.mode(rice_consumption["co2_emission"]))
 # Since the mode is around 6.35, the median measurement of 15.2 is considered since it is more closed to the mode's value
 rice_consumption.plot(kind="hist", x="co2_emission")
+plt.title("Distribution of CO2 emissions from Rice Consumption")
+plt.xlabel("CO2 emissions")
 plt.show() # Expect it to be positively / right skewed

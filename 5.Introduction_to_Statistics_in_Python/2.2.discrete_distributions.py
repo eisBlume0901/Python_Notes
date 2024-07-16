@@ -10,7 +10,7 @@ data = {
 restaurant_groups = pd.DataFrame(data)
 
 # Histogram of restaurant groups (review 1.basic_plots_with_matplotlib.py under 2.Intermediate_Python
-restaurant_groups["group_size"].plot(kind="hist", bins=[2, 3, 4, 5, 6], xlabel="Group Size")
+restaurant_groups["group_size"].plot(kind="hist", bins=[2, 3, 4, 5, 6], xlabel="Group Size", xticks=[2, 3, 4, 5, 6])
 plt.show()
 
 # Discrete Probability Distribution in Tabular Form
