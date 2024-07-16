@@ -29,16 +29,20 @@ sales_icecream_df = pd.DataFrame(sales_icecream)
 sales_icecream_df = sales_icecream_df.set_index("Village")
 print(sales_icecream_df.head())
 
-figure, axis = plt.subplots()
+figure, axis = plt.subplots(figsize=(5, 10))
 
 axis.bar(sales_icecream_df.index, sales_icecream_df["Strawberry"], label="Strawberry", color="pink")
 axis.bar(sales_icecream_df.index, sales_icecream_df["Vanilla"], bottom=sales_icecream_df["Strawberry"], label="Vanilla", color="yellow")
 axis.bar(sales_icecream_df.index, sales_icecream_df["Mint Chocolate Chip"], bottom=sales_icecream_df["Vanilla"] + sales_icecream_df["Strawberry"], label="Mint Chocolate Chip", color="green")
+axis.bar(sales_icecream_df.index, sales_icecream_df["Pistachio"], bottom=sales_icecream_df["Mint Chocolate Chip"] + sales_icecream_df["Vanilla"] + sales_icecream_df["Strawberry"], label="Pistachio", color="brown")
 # Set the positions of the x-ticks
 axis.set_xticks(range(len(sales_icecream_df.index)))
 
 # Set the labels for the x-ticks with rotation for better readability
-axis.set_xticklabels(sales_icecream_df.index, rotation=90)
+axis.set_xticklabels(sales_icecream_df.index, rotation=35)
+axis.set_ylabel("Number of Sales per piece")
+axis.set_xlabel("Villages Name")
+axis.set_title("Ice Cream Sales in Villages")
 axis.legend()
 plt.tight_layout()
 plt.show()
